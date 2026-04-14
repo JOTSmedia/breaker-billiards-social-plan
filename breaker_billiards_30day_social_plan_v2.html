@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breaker Billiards — 30-Day Social Media Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Barlow', sans-serif; background: #0a1628; color: #e8f0fe; }
+
+.header { background: #0d1f3c; border-bottom: 2px solid #1e5fa5; padding: 2rem 1.5rem 1.5rem; text-align: center; }
+.header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: #2b8fff; letter-spacing: 3px; }
+.header .sub { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; color: #f0a500; letter-spacing: 4px; text-transform: uppercase; margin-top: 4px; }
+
+.stats-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 1rem 1.5rem; background: #0d1f3c; border-bottom: 1px solid #1a3558; justify-content: center; }
+.stat-pill { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; background: #060f1e; border: 1px solid #1a3558; color: #8aa8cc; text-transform: uppercase; }
+.stat-pill span { color: #2b8fff; }
+
+/* PLATFORM PLAYBOOK SECTION */
+.playbook { background: #0d1f3c; padding: 1.5rem; border-bottom: 2px solid #1a3558; }
+.playbook-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: #f0a500; letter-spacing: 3px; text-align: center; margin-bottom: 1rem; }
+.playbook-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; max-width: 1200px; margin: 0 auto; }
+.playbook-card { background: #060f1e; border: 1px solid #1a3558; border-radius: 8px; padding: 14px; }
+.playbook-card.ig { border-left: 4px solid #e1306c; }
+.playbook-card.tt { border-left: 4px solid #69c9d0; }
+.playbook-card.fb { border-left: 4px solid #1877f2; }
+.playbook-platform { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 8px; }
+.playbook-card.ig .playbook-platform { color: #e1306c; }
+.playbook-card.tt .playbook-platform { color: #69c9d0; }
+.playbook-card.fb .playbook-platform { color: #5b9ef5; }
+.playbook-row { font-size: 0.78rem; color: #c8d8ee; line-height: 1.6; margin-bottom: 6px; }
+.playbook-row strong { color: #e8f0fe; font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 2px; color: #8aa8cc; }
+
+/* CONTROLS / FILTERS */
+.controls { display: flex; flex-wrap: wrap; gap: 8px; padding: 1rem 1.5rem; background: #0d1f3c; border-bottom: 1px solid #1a3558; justify-content: center; position: sticky; top: 0; z-index: 10; }
+.filter-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; border: 1.5px solid; cursor: pointer; background: transparent; transition: all 0.2s; }
+.filter-btn.all { border-color: #4a9eff; color: #4a9eff; }
+.filter-btn.all.active,.filter-btn.all:hover { background: #4a9eff; color: #0a1628; }
+.filter-btn.ig { border-color: #e1306c; color: #e1306c; }
+.filter-btn.ig.active,.filter-btn.ig:hover { background: #e1306c; color: #fff; }
+.filter-btn.tt { border-color: #69c9d0; color: #69c9d0; }
+.filter-btn.tt.active,.filter-btn.tt:hover { background: #69c9d0; color: #0a1628; }
+.filter-btn.fb { border-color: #1877f2; color: #1877f2; }
+.filter-btn.fb.active,.filter-btn.fb:hover { background: #1877f2; color: #fff; }
+.filter-btn.billiards { border-color: #f0a500; color: #f0a500; }
+.filter-btn.billiards.active,.filter-btn.billiards:hover { background: #f0a500; color: #0a1628; }
+.filter-btn.bar { border-color: #7fff7f; color: #7fff7f; }
+.filter-btn.bar.active,.filter-btn.bar:hover { background: #7fff7f; color: #0a1628; }
+.filter-btn.comedy { border-color: #ff7f50; color: #ff7f50; }
+.filter-btn.comedy.active,.filter-btn.comedy:hover { background: #ff7f50; color: #0a1628; }
+.filter-btn.special { border-color: #c77dff; color: #c77dff; }
+.filter-btn.special.active,.filter-btn.special:hover { background: #c77dff; color: #0a1628; }
+.filter-btn.milestone { border-color: #ffd700; color: #ffd700; }
+.filter-btn.milestone.active,.filter-btn.milestone:hover { background: #ffd700; color: #0a1628; }
+
+/* WEEK SECTION */
+.week-section { padding: 1.5rem 1.5rem 0; max-width: 1400px; margin: 0 auto; }
+.week-label { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: #1e5fa5; letter-spacing: 3px; border-bottom: 1px solid #1a3558; padding-bottom: 6px; margin-bottom: 1rem; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin-bottom: 1.5rem; }
+
+/* CARD */
+.card { background: #0d1f3c; border: 1px solid #1a3558; border-radius: 10px; padding: 14px; transition: transform 0.15s, border-color 0.15s; }
+.card:hover { border-color: #2b8fff; }
+.card.hidden { display: none; }
+.card.milestone-card { border: 2px solid #ffd700; background: #1a1d0a; }
+.card.milestone-card:hover { border-color: #ffd700; }
+
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+.date-block { flex-shrink: 0; }
+.day-name { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; color: #6a8ab0; text-transform: uppercase; }
+.date-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: #2b8fff; line-height: 1; }
+.month-abbr { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; color: #6a8ab0; letter-spacing: 1px; }
+.tags-block { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; flex: 1; }
+.tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 1px; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; }
+.tag-ig { background: rgba(225,48,108,0.2); color: #e1306c; border: 1px solid rgba(225,48,108,0.4); }
+.tag-tt { background: rgba(105,201,208,0.15); color: #69c9d0; border: 1px solid rgba(105,201,208,0.35); }
+.tag-fb { background: rgba(24,119,242,0.2); color: #5b9ef5; border: 1px solid rgba(24,119,242,0.4); }
+.type-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 1px; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; }
+.type-billiards { background: rgba(240,165,0,0.15); color: #f0a500; border: 1px solid rgba(240,165,0,0.3); }
+.type-bar { background: rgba(127,255,127,0.1); color: #7fff7f; border: 1px solid rgba(127,255,127,0.25); }
+.type-comedy { background: rgba(255,127,80,0.15); color: #ff7f50; border: 1px solid rgba(255,127,80,0.3); }
+.type-special { background: rgba(199,125,255,0.15); color: #c77dff; border: 1px solid rgba(199,125,255,0.3); }
+.type-milestone { background: rgba(255,215,0,0.15); color: #ffd700; border: 1px solid rgba(255,215,0,0.35); }
+
+.card-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: #e8f0fe; line-height: 1.2; margin-bottom: 6px; }
+.card-concept { font-size: 0.8rem; color: #8aa8cc; line-height: 1.5; margin-bottom: 10px; font-style: italic; }
+
+.expand-section { display: none; margin-top: 12px; }
+.card.expanded .expand-section { display: block; }
+
+/* PLATFORM BLOCK INSIDE CARD */
+.plat-block { background: #060f1e; border: 1px solid #1a3558; border-radius: 8px; padding: 12px; margin-bottom: 10px; }
+.plat-block.ig-block { border-left: 3px solid #e1306c; }
+.plat-block.tt-block { border-left: 3px solid #69c9d0; }
+.plat-block.fb-block { border-left: 3px solid #1877f2; }
+.plat-block-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.plat-block-name { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 2px; }
+.plat-block.ig-block .plat-block-name { color: #e1306c; }
+.plat-block.tt-block .plat-block-name { color: #69c9d0; }
+.plat-block.fb-block .plat-block-name { color: #5b9ef5; }
+.plat-block-format { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #c8d8ee; background: rgba(255,255,255,0.05); padding: 2px 8px; border-radius: 4px; }
+
+.plat-block-row { margin-bottom: 8px; }
+.plat-block-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #6a8ab0; margin-bottom: 3px; }
+.plat-block-text { font-size: 0.8rem; color: #c8d8ee; line-height: 1.55; }
+.plat-block-text.spec { font-family: 'Barlow Condensed', sans-serif; color: #8aa8cc; font-size: 0.78rem; }
+.plat-block-text.caption { white-space: pre-wrap; background: #0a1628; padding: 8px 10px; border-radius: 4px; border: 1px solid #1a3558; }
+
+.skip-marker { background: rgba(255,127,80,0.1); border: 1px dashed rgba(255,127,80,0.4); padding: 8px 12px; border-radius: 6px; }
+.skip-marker .plat-block-text { color: #ff9f70; font-style: italic; }
+
+.hashtags-section { background: #060f1e; border: 1px solid #1a3558; border-radius: 6px; padding: 10px 12px; }
+.hashtags { font-size: 0.75rem; color: #2b8fff; line-height: 1.8; word-break: break-word; }
+
+.toggle-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #4a9eff; background: rgba(74,158,255,0.08); border: 1px solid rgba(74,158,255,0.3); border-radius: 4px; cursor: pointer; padding: 6px 12px; margin-top: 4px; width: 100%; transition: background 0.15s; }
+.toggle-btn:hover { background: rgba(74,158,255,0.15); }
+
+footer { text-align: center; padding: 2rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; color: #3a5070; letter-spacing: 2px; text-transform: uppercase; border-top: 1px solid #1a3558; margin-top: 2rem; }
+
+@media (max-width: 600px) {
+  .header h1 { font-size: 2rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .stats-bar, .controls { padding: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>30-DAY SOCIAL MEDIA PLAN</h1>
+  <div class="sub">Breaker Billiards · April 20 – May 19, 2025</div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-pill"><span>30</span> Posts</div>
+  <div class="stat-pill"><span>3</span> Platforms</div>
+  <div class="stat-pill"><span>5</span> Content Pillars</div>
+  <div class="stat-pill">Tap a card to expand platform-specific instructions</div>
+</div>
+
+<!-- PLATFORM PLAYBOOK -->
+<div class="playbook">
+  <div class="playbook-title">PLATFORM PLAYBOOK — Foundational Rules</div>
+  <div class="playbook-grid">
+
+    <div class="playbook-card ig">
+      <div class="playbook-platform">📸 INSTAGRAM</div>
+      <div class="playbook-row"><strong>Best formats:</strong> Reels (9:16) for reach · Carousels (4:5) for saves & permanence · Single posts only for hero shots/announcements</div>
+      <div class="playbook-row"><strong>Image specs:</strong> 4:5 vertical (1080x1350) for max feed real estate · Square 1080x1080 for graphics</div>
+      <div class="playbook-row"><strong>Video specs:</strong> 9:16, 1080x1920, 15–60s · Use trending audio from Reels Audio tab</div>
+      <div class="playbook-row"><strong>Caption length:</strong> 100–200 words ideal · Line breaks every 1–2 sentences for mobile readability</div>
+      <div class="playbook-row"><strong>Hashtags:</strong> 8–15 in first comment (not main caption) · Mix big + niche tags</div>
+      <div class="playbook-row"><strong>Pin strategy:</strong> Pin highest-performing Reel weekly · Pin 3 grid posts representing brand pillars</div>
+    </div>
+
+    <div class="playbook-card tt">
+      <div class="playbook-platform">🎵 TIKTOK</div>
+      <div class="playbook-row"><strong>Best formats:</strong> Native vertical video ONLY · 21–34s sweet spot · 60s for emotional/storytelling</div>
+      <div class="playbook-row"><strong>Hook rule:</strong> First 1.5 seconds must stop the scroll — loudest visual, biggest text, boldest line</div>
+      <div class="playbook-row"><strong>Subtitles required:</strong> 60% of TikTok is watched on mute — burn captions in</div>
+      <div class="playbook-row"><strong>Audio:</strong> Use TRENDING sounds from Discover page · Refresh weekly · Trending sound > great audio</div>
+      <div class="playbook-row"><strong>Hashtags:</strong> 4–6 in caption · Mix #fyp + niche + brand · Keep caption under 150 chars</div>
+      <div class="playbook-row"><strong>NEVER:</strong> Cross-post videos with TikTok watermark · Static graphics · Long intros</div>
+    </div>
+
+    <div class="playbook-card fb">
+      <div class="playbook-platform">👤 FACEBOOK</div>
+      <div class="playbook-row"><strong>Best formats:</strong> Photo carousels (3–7 images) outperform video · Single hero photo for cocktails · Events for tournaments</div>
+      <div class="playbook-row"><strong>Image specs:</strong> Square 1080x1080 or landscape 1200x630 · 4:5 also works</div>
+      <div class="playbook-row"><strong>Caption length:</strong> 150–400 words · FB users actually read · Always include address + phone + hours</div>
+      <div class="playbook-row"><strong>Engagement:</strong> Tag prompts ('Tag a friend who...') drive top-3 engagement format · Comments boost reach more than likes</div>
+      <div class="playbook-row"><strong>Local tools:</strong> Always create Facebook Events for milestones · Boost posts $30–100 for special nights · Geo-target Clifton/Passaic</div>
+      <div class="playbook-row"><strong>Tag visible people:</strong> When customers appear in photos, tag them — they share to their own profile = free reach</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="controls">
+  <button class="filter-btn all active" onclick="filterCards('all',this)">All</button>
+  <button class="filter-btn ig" onclick="filterCards('ig',this)">📸 Instagram</button>
+  <button class="filter-btn tt" onclick="filterCards('tt',this)">🎵 TikTok</button>
+  <button class="filter-btn fb" onclick="filterCards('fb',this)">👤 Facebook</button>
+  <button class="filter-btn billiards" onclick="filterCards('billiards',this)">🎱 Billiards</button>
+  <button class="filter-btn bar" onclick="filterCards('bar',this)">🍹 Bar</button>
+  <button class="filter-btn comedy" onclick="filterCards('comedy',this)">😂 Comedy</button>
+  <button class="filter-btn special" onclick="filterCards('special',this)">⭐ Specials</button>
+  <button class="filter-btn milestone" onclick="filterCards('milestone',this)">🏆 Milestone</button>
+</div>
+
+<div id="plan-container"></div>
+
+<footer>Breaker Billiards · Shoot Pool. Not People. · Social Media Plan v2 · Apr–May 2025</footer>
+
+<script>
+const posts = [
+  {
+    "date": "20",
+    "day": "Sun",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "billiards",
+    "title": "Grand Opening Week Recap Reel",
+    "concept": "High-energy recap of the tables, the vibe, the people. 'We're here & we're not leaving.' Hype edit that establishes the brand as the new go-to spot.",
+    "ig_caption": "The cue is chalked. The balls are racked. And we are OPEN. \ud83c\udfb1\n\nBreaker Billiards is where the real ones play. Pool tables, craft cocktails, and a vibe you can't find anywhere else. Come see what everyone's already talking about. \ud83d\udd35\u26ab\n\nShoot Pool. Not People.",
+    "tt_caption": "POV: You just found your new favorite spot \ud83c\udfb1\ud83d\udd35 The break that started it all \u2014 Breaker Billiards is open and this place is DIFFERENT. Come through. #BreakerBilliards #PoolHall #BilliardsLife #NewSpot #ShootPoolNotPeople",
+    "fb_caption": "We kicked off the week and the energy has been ELECTRIC! \ud83c\udfb1\u26a1 Whether you're a seasoned shark or picking up a cue for the first time \u2014 Breaker Billiards is YOUR place. Stop in this week and experience it for yourself. Tag someone who needs to see this!",
+    "hashtags": "#BreakerBilliards #ShootPoolNotPeople #PoolHall #BilliardsNJ #NightOut #NewJersey #PoolLife #CueLife",
+    "ig_format": "Reel + Carousel post",
+    "ig_how": "Film 8\u201310 vertical (9:16) clips at the venue: tables in motion, a clean break shot, the bar in the background, a wide pull-back of the room. Edit a 30s Reel using a trending hype audio. Then upload 4\u20135 stills as a carousel separately for permanent feed presence (Reels disappear from grid algorithmically).",
+    "ig_specs": "Reel: 9:16, 1080x1920, 30s max. Carousel images: 4:5 vertical (1080x1350) for max feed real estate.",
+    "tt_format": "60s Reel-style hype edit",
+    "tt_how": "Same vertical footage, but cut faster (1\u20132s per clip). Use a CURRENT trending sound from TikTok's Discover page. First 1.5 seconds MUST hook \u2014 start with the loudest visual (the break shot, the bar light, a packed room). Add bold sans-serif text overlay in the first 3 seconds: 'New favorite spot just dropped.'",
+    "tt_specs": "9:16, 1080x1920, 21\u201334s sweet spot. Use TikTok's native editor for caption overlays \u2014 they're algorithm-favored over CapCut text.",
+    "fb_format": "Photo carousel (3\u20135 images) + share Reel separately",
+    "fb_how": "Facebook's photo posts outperform video natively. Pull 3\u20135 of your best stills from the Reel shoot. Post them as a carousel with a longer descriptive caption. The Reel can be cross-shared but the carousel is the workhorse on FB.",
+    "fb_specs": "Square (1080x1080) or 4:5. Caption: 100\u2013250 words works best. Always tag the location."
+  },
+  {
+    "date": "21",
+    "day": "Mon",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "fb"
+    ],
+    "type": "special",
+    "title": "Early Bird Pricing Spotlight",
+    "concept": "Clean graphic + photo showing early bird hours and pricing. Empty tables looking gorgeous. Targets the after-work crowd.",
+    "ig_caption": "Early bird gets the table. \ud83c\udfb1\n\nDid you know we have Early Bird pricing? Come in before [TIME] and get discounted table rates. Perfect for after-work decompression. Leave the stress at the door \u2014 grab a cue and let it fly.\n\n\ud83d\udccd [Address] | See bio for hours",
+    "tt_caption": "Work stress? Table therapy is the answer \ud83c\udfb1 Early bird pricing means happy hour just got a whole new meaning. Come in early, play cheap, sip something cold. #EarlyBird #PoolHall #AfterWork #BreakerBilliards #TableTherapy",
+    "fb_caption": "\ud83c\udfb1 EARLY BIRD SPECIAL \ud83c\udfb1\n\nCome in before [TIME] and save on table time! This is THE move for the after-work crew. Grab your coworkers, grab a drink, and knock a few balls around. Stress relief, guaranteed.\n\n\ud83d\udccd [Address] | Comment 'EARLY BIRD' if you're coming!",
+    "hashtags": "#EarlyBirdSpecial #HappyHour #PoolHall #BreakerBilliards #AfterWork #NJNightlife #TableTime",
+    "ig_format": "Single image post (Canva graphic)",
+    "ig_how": "Build in Canva using the 'Instagram Post Square' template. Background: navy with the Breaker blue accent. Big bold price/time display. Add ONE photo of an empty, beautifully-lit table behind a semi-transparent overlay so it doesn't compete with the text. Export at 1080x1080.",
+    "ig_specs": "Square 1080x1080. Use brand fonts (bold condensed display + clean sans body). Keep text under 7 words on the image itself.",
+    "tt_format": "SKIP TikTok for this one",
+    "tt_how": "Static deal posts don't perform on TikTok \u2014 the algorithm penalizes low-motion content. Save this energy for Stories instead, or convert it into a 10s 'POV: it's 5pm and you don't want to go home' video where you walk into the venue.",
+    "tt_specs": "N/A \u2014 see Stories playbook for TikTok angle.",
+    "fb_format": "Same Canva graphic + photo of empty tables",
+    "fb_how": "Post the Canva graphic AS the main image \u2014 Facebook displays it large in feed. Pair with a separate iPhone photo of the venue at golden-hour lighting in a comment thread or carousel. FB users actually read the caption, so the deal details go in the post body, not just the graphic.",
+    "fb_specs": "Square 1080x1080 or landscape 1200x630. Boost-eligible if you want to push it locally."
+  },
+  {
+    "date": "22",
+    "day": "Tue",
+    "month": "APR",
+    "platforms": [
+      "tt",
+      "ig"
+    ],
+    "type": "comedy",
+    "title": "Sketch: 'Types of Pool Players'",
+    "concept": "4 character types: The Shark, The Newbie, The Show-Off, The One Who Just Drinks. Quick cuts, costume changes (just a hat or shirt swap), comedy gold.",
+    "ig_caption": "Which one are you? \ud83d\ude02\ud83c\udfb1 Tag your crew below and let us know which type shows up when you all get here.\n\nSpoiler: we love all of you \u2014 especially the one who just comes for the drinks. \ud83d\ude02\n\nCome show us your character.",
+    "tt_caption": "Every friend group has these 4 pool players \ud83d\ude02\ud83c\udfb1 Which one are you?? Drop your type in the comments \ud83d\udc47 #PoolHumor #BilliardsLife #BreakerBilliards #Relatable #PoolPlayer #FriendsNight",
+    "fb_caption": "\ud83d\ude02 Tag your friends and let them expose themselves! Which type of pool player is YOUR crew? Drop a name in the comments for each one \u2014 we dare you. \ud83c\udfb1",
+    "hashtags": "#PoolHumor #BilliardsComedy #ShootPoolNotPeople #BreakerBilliards #Relatable #FriendGroup #GamesNight",
+    "ig_format": "Reel (cross-post from TikTok)",
+    "ig_how": "Cross-post the TikTok WITHOUT the watermark. Use SnapTik or SSSTik to download cleanly, then re-upload to Reels. Add the IG caption fresh (don't copy TikTok's). Pin this Reel to the top of your IG grid for the week \u2014 comedy drives saves and shares which boost profile reach.",
+    "ig_specs": "9:16, 1080x1920. 15\u201330s ideal. Crop or remove TikTok-specific text overlays before reuploading.",
+    "tt_format": "60s native sketch \u2014 film WITH the TikTok app",
+    "tt_how": "Stage in the venue. One person plays all 4 characters with quick costume swaps (hat for The Shark, polo for The Newbie, etc.) \u2014 this style performs better than 4 different actors. Use TikTok's split-screen or quick-cut transitions native to the app. End with a 1-second 'Which one are you?' text card. Use a slightly viral comedic audio.",
+    "tt_specs": "9:16, 21\u201334s sweet spot. Hook line in first 1.5 seconds: 'Every pool hall has these 4 people.' Subtitles burned in (60% of viewers watch on mute).",
+    "fb_format": "Cross-post the Reel",
+    "fb_how": "Comedy travels well on Facebook because it gets shared. Cross-post the Reel via Meta Business Suite (auto-shares from IG). Add the FB-specific caption that prompts tagging.",
+    "fb_specs": "Same Reel format. FB will auto-format the aspect ratio."
+  },
+  {
+    "date": "23",
+    "day": "Wed",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "fb",
+      "tt"
+    ],
+    "type": "bar",
+    "title": "House Rack Cocktail Spotlight",
+    "concept": "The House Rack \u2014 Tito's, St-Germain, Sour Mix, Simple Syrup. Hero shot of the cocktail in motion: ice swirling, garnish drop, condensation. Slow, premium, sexy.",
+    "ig_caption": "The House Rack: deceptively simple. Dangerously good. \ud83c\udfb1\ud83c\udf78\n\nTito's Vodka \u00b7 St-Germain \u00b7 Sour Mix \u00b7 Simple Syrup \u00b7 Lemon Garnish\n\nThis is the one we'd order if we had to pick just one. Come find your forever drink at the bar. \ud83d\udd35",
+    "tt_caption": "The House Rack at Breaker Billiards is what cocktail dreams are made of \ud83c\udf78\u2728 Tito's + St-Germain + Sour Mix + Simple Syrup = elite. Save this and try it next time! #HouseRack #CocktailTok #BreakerBilliards #NJBar #DrinkOfChoice",
+    "fb_caption": "\ud83c\udf78 COCKTAIL FEATURE: THE HOUSE RACK \ud83c\udf78\n\nOur signature cocktail is here to stay. Tito's Vodka \u00b7 St-Germain \u00b7 Sour Mix \u00b7 Simple Syrup \u00b7 Lemon Garnish.\n\nIf you've never tried it \u2014 tonight's the night. Come in and tell the bartender we sent you. \ud83d\udccd",
+    "hashtags": "#HouseRack #SignatureCocktail #BreakerBilliards #NJBar #TitosVodka #StGermain #CraftCocktail #DrinkOfTheWeek",
+    "ig_format": "Reel \u2014 slow-motion cocktail build",
+    "ig_how": "Use phone slow-mo (240fps if available). Set up a single light source from the side at the bar. Film: ice landing in glass, vodka pour, garnish drop, final stir. 4\u20135 clips of 2\u20133s each. Edit together with a moody/jazzy audio. Color grade slightly cooler in the IG editor for premium feel.",
+    "ig_specs": "9:16 Reel, 15\u201320s. Caption ingredients in 1-line breaks for readability. Tag @titosvodka and @stgermain \u2014 they often reshare.",
+    "tt_format": "30s ASMR-style cocktail build",
+    "tt_how": "TikTok cocktail content is its own genre. NO music \u2014 use ambient sound (ice clinking, pour glug, shaker rattle). Top-down camera angle is essential. Film with phone propped on a stack of books over the bar. Bold caption overlay every 2 seconds with each ingredient. End with 'House Rack \u2014 at Breaker Billiards.'",
+    "tt_specs": "9:16, 21\u201334s. Search 'cocktail asmr' before posting to find the trending sound style. NO music if going pure ASMR. Burn in subtitles for ingredients.",
+    "fb_format": "Single hero photo + recipe in caption",
+    "fb_how": "Facebook prefers the punctual photo + readable text. Take the SHARPEST still from the Reel shoot, post it large with the full ingredient list and a story-style caption ('We almost didn't put this on the menu...'). FB users love behind-the-scenes recipe-adjacent content.",
+    "fb_specs": "Square or 4:5 photo. Caption length: 150\u2013300 words. Always include 'Address + Hours' at the bottom for FB."
+  },
+  {
+    "date": "24",
+    "day": "Thu",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "comedy",
+    "title": "Sketch: 'Reading the Cocktail Menu Out Loud'",
+    "concept": "Customer slowly reads the menu out loud. The bartender's deadpan reactions get funnier with each drink name. 'Build Your Own Old Fashioned Bar?' '...yes.' Quick comedy.",
+    "ig_caption": "When you've never seen a menu like ours before. \ud83d\ude02\ud83c\udf78\n\nYes, we have a Build Your Own Old Fashioned Bar.\nYes, the smoker is real.\nYes, we'll guide you through it.\n\nFirst-timers welcome. Repeat customers worshipped. Come in. \ud83c\udfb1",
+    "tt_caption": "Watching first-timers read our cocktail menu is THE entertainment \ud83d\ude02\ud83c\udf78 Build your own old fashioned? Yes that's a real thing. Yes the smoker is real. #BarTok #CocktailMenu #BreakerBilliards #FirstTimer #NJBar",
+    "fb_caption": "\ud83d\ude02 First-time visitors to our bar always have the same reaction. \ud83c\udf78\n\n'Wait \u2014 you have a Build Your Own Old Fashioned Bar?'\n\nYes. Yes we do. Come in and let our bartenders show you the way. \ud83c\udfb1",
+    "hashtags": "#BarHumor #CocktailMenu #BreakerBilliards #FirstTimer #BuildYourOwn #BarComedy #NJBar",
+    "ig_format": "Reel (sketch format)",
+    "ig_how": "Film at the bar. One actor reads the menu, one actor (bartender) reacts in close-ups. Cut between the two. Comedy is in the editing \u2014 the timing of the deadpan reaction. Use jump cuts. NO music or use only a subtle bed.",
+    "ig_specs": "9:16, 30\u201345s. Captions burned in for accessibility. Pin to grid for the day.",
+    "tt_format": "45s native sketch",
+    "tt_how": "Same sketch but film inside the TikTok app for native algorithmic boost. Use TikTok's reaction filter or split-screen for the bartender's face. Add 'when first-timers see our menu' text overlay in the first second.",
+    "tt_specs": "9:16, 30\u201345s. Ends with the bartender saying 'just trust me.' Trending dry-comedy audio if available.",
+    "fb_format": "Cross-post Reel + tag-encouraging caption",
+    "fb_how": "Facebook comedy thrives on tagging. Cross-post the Reel and write a caption that explicitly says 'Tag the friend who would 100% read every drink out loud.' This drives organic reach via comment notifications.",
+    "fb_specs": "Reel cross-post. Caption length: 80\u2013120 words. Always include the tag prompt."
+  },
+  {
+    "date": "25",
+    "day": "Fri",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "billiards",
+    "title": "Friday Night Energy \u2014 Live Footage",
+    "concept": "Real Friday night documentary footage. People playing, laughing, ordering drinks. The vibe is the message. No script, just authentic energy.",
+    "ig_caption": "This is what Friday looks like. \ud83c\udfb1\ud83d\udd35\n\nReal people. Real games. Real energy. No filter needed.\n\nCome write your own Friday at Breaker. Tables filling up fast \u2014 see you tonight.",
+    "tt_caption": "Friday night at Breaker Billiards is a whole VIBE \ud83c\udfb1\ud83d\udd25 Come through TONIGHT \u2014 tables are filling up fast. Tag your crew! #FridayNight #PoolHall #BreakerBilliards #WeekendVibes #NJNightlife",
+    "fb_caption": "\ud83c\udfb1\ud83d\udd35 IT'S FRIDAY \ud83d\udd35\ud83c\udfb1\n\nThe tables are ready. The drinks are flowing. The crew is here.\n\nWho's stopping by tonight? Drop a \ud83c\udfb1 in the comments and bring a friend! \ud83d\udccd [Address]",
+    "hashtags": "#FridayNight #BreakerBilliards #WeekendVibes #PoolHall #NJNightlife #FridayFun #CueLife",
+    "ig_format": "Reel (live energy edit)",
+    "ig_how": "Film between 8\u201310pm Friday. Get 10\u201312 quick clips: hands chalking a cue, balls breaking, someone laughing at the bar, a drink being slid across, the back of a packed crowd. Edit fast cuts to a hype trending audio. Post within 24h while still relevant.",
+    "ig_specs": "9:16, 30s, 1080x1920. Posted Saturday morning at 9\u201310am to catch weekend recap scrollers.",
+    "tt_format": "30s authentic 'come through' edit",
+    "tt_how": "Same footage, faster cuts. The first frame should be the LOUDEST moment (break shot or a big laugh). Use a current trending TikTok audio. Caption hook in first 2 seconds: 'POV: it's Friday at Breaker.' Geo-tag Clifton, NJ.",
+    "tt_specs": "9:16, 21\u201334s. Native upload. Use the location feature for local discovery.",
+    "fb_format": "Photo dump (5\u20137 photos)",
+    "fb_how": "Facebook's algorithm loves photo dumps from local businesses \u2014 they get organic shares to friends. Pull 5\u20137 of the best STILLS from the Friday night shoot. Post as a carousel with a 'last night was something else' caption. Posts Saturday morning.",
+    "fb_specs": "Square or 4:5 stills. 5\u20137 images. Include faces (with permission) \u2014 FB engagement spikes when there are people in the photos."
+  },
+  {
+    "date": "26",
+    "day": "Sat",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "tt"
+    ],
+    "type": "comedy",
+    "title": "Sketch: 'The Couple That Plays Together'",
+    "concept": "Couple plays pool. One is pretending not to be competitive. Cracks immediately. Best when based on real customer dynamics \u2014 wholesome and relatable.",
+    "ig_caption": "'It's just for fun!' \u2026until the first scratch. \ud83d\ude02\ud83c\udfb1\n\nEvery couple at Breaker Billiards turns into THIS couple eventually. We love it. We allow it. We encourage it.\n\nDate night, leveled up. Tag your competitive partner. \ud83d\udc99",
+    "tt_caption": "The couple who said it's 'just a casual game' \ud83d\ude02\ud83c\udfb1 Spoiler: it's never casual. Tag your partner and admit it. #DateNight #CouplesComedy #PoolHall #BreakerBilliards #Relatable",
+    "fb_caption": "\ud83d\ude02 Every couple says 'we're just playing for fun' until the first scratch.\n\nThen it's WAR. \ud83c\udfb1\n\nTag your partner who's 100% guilty of this. We see you. \ud83d\udc99",
+    "hashtags": "#DateNight #CouplesComedy #BreakerBilliards #PoolHall #Couples #FunnyDates #Relatable",
+    "ig_format": "Reel \u2014 date-night sketch",
+    "ig_how": "Film a real or staged couple at a table. Capture the build: friendly banter \u2192 first miss \u2192 competitive face. The comedy is in their facial expressions. Get TIGHT close-ups on faces, not just the table. Edit with a subtle cinematic music bed.",
+    "ig_specs": "9:16 Reel, 30\u201345s. Pin to grid for date-night-search discoverability.",
+    "tt_format": "45s native sketch with relatable hook",
+    "tt_how": "Hook line burned in: 'POV: your partner said this would be casual.' Quick zoom-ins on competitive faces. Use trending couples-comedy audio. End with the partner sinking the 8 and the other one walking out frame.",
+    "tt_specs": "9:16, 30\u201345s. Captions on every line. The text overlay is the joke as much as the visuals.",
+    "fb_format": "SKIP \u2014 re-share to IG/TT only",
+    "fb_how": "This audience-specific comedy is better optimized for IG/TT. Save Facebook bandwidth for the bigger photo posts and announcements. If you want some FB presence, share it as a Story only.",
+    "fb_specs": "N/A \u2014 Stories only if anywhere."
+  },
+  {
+    "date": "27",
+    "day": "Sun",
+    "month": "APR",
+    "platforms": [
+      "fb",
+      "ig"
+    ],
+    "type": "bar",
+    "title": "Sunday Sipping: Build Your Own Old Fashioned Bar",
+    "concept": "Feature the Build Your Own Old Fashioned Bar. Show all 10+ bourbons, the smoker, the princess cube. Premium, ritualistic, upscale.",
+    "ig_caption": "Sunday is for sipping. \ud83e\udd43\n\nIntroducing our Build Your Own Old Fashioned Bar \u2014 choose from 10+ bourbons, add your bitters, your smoker (+$1), and your garnish. This isn't just a drink order. It's a ritual.\n\nCome in. Take your time. You deserve it.",
+    "tt_caption": "10+ bourbons. A smoker. A princess cube. This Old Fashioned bar goes CRAZY \ud83e\udd43\ud83d\udd25 #OldFashioned #BourbonTok #BreakerBilliards #CraftCocktail #SundayFunday #BarTok",
+    "fb_caption": "\ud83e\udd43 BUILD YOUR OWN OLD FASHIONED BAR \ud83e\udd43\n\nEvery Sunday (and every day!), craft the Old Fashioned of your dreams. 10+ bourbons \u2014 Maker's Mark, Angel's Envy, Woodford Reserve, Bulleit, and more. Add the Old Oak Smoker for just $1.\n\nSunday, done right. \ud83d\udccd",
+    "hashtags": "#OldFashioned #BuildYourOwn #BourbonBar #BreakerBilliards #SundayFunday #CraftCocktail #WhiskeyBar #NJBar",
+    "ig_format": "Carousel (5\u20137 slides)",
+    "ig_how": "Slide 1: hero shot of finished Old Fashioned. Slide 2: the bourbon shelf wide shot. Slide 3-5: macro close-ups of individual bottles (Maker's, Angel's Envy, Woodford). Slide 6: the smoker in action with whiskey smoke billowing. Slide 7: brand-color graphic with '+$1 smoker' text. Carousels get reshown to followers who don't swipe \u2014 they perform best for educational/menu content.",
+    "ig_specs": "4:5 vertical (1080x1350) per slide. Cohesive color grading across all slides. First slide is the hook \u2014 make it the prettiest.",
+    "tt_format": "45s \u2014 the smoker reveal",
+    "tt_how": "The smoker is the star. Build the cocktail in real-time on camera, then place the smoking lid over the glass. The smoke billowing out IS the viral moment. Hold on it for 3\u20134 seconds. Audio: smoky/jazzy ambient or trending bourbon audio. Caption: 'POV: you order an Old Fashioned at Breaker.'",
+    "tt_specs": "9:16, 30\u201345s. Top-down OR side angle for the smoke shot. Native upload only.",
+    "fb_format": "Carousel with full bourbon list in caption",
+    "fb_how": "Post the SAME 5\u20137 image carousel from IG. Caption is the differentiator \u2014 FB users want to know exactly what's offered. List every single bourbon by name. Include pricing if comfortable. End with phone number for reservations.",
+    "fb_specs": "4:5 or square carousel. Caption length: 200\u2013400 words is fine here. FB rewards informational depth."
+  },
+  {
+    "date": "28",
+    "day": "Mon",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "tt"
+    ],
+    "type": "billiards",
+    "title": "Pool Tip: Master Your Break Shot",
+    "concept": "30-second tutorial on the perfect break shot. Educational positioning. Use clean text overlays. Saves and shares are the goal.",
+    "ig_caption": "Want a break that actually drops? We got you. \ud83c\udfb1\n\nTip 1: Center ball hit for control.\nTip 2: Rack tight \u2014 every ball touching.\nTip 3: Follow through \u2014 always.\n\nSave this and use it your next visit. Your opponents won't know what hit 'em. \ud83d\ude0f",
+    "tt_caption": "Break shot secrets your opponents don't want you to know \ud83e\udd2b\ud83c\udfb1 Try these next time you're here and watch the difference. #PoolTips #BilliardsLife #BreakShot #BreakerBilliards #PoolTok #LearnPool",
+    "fb_caption": "\ud83c\udfb1 POOL TIP OF THE WEEK \ud83c\udfb1\n\nMaster your break shot with these 3 simple tips! Save this post and try it out at Breaker Billiards. Whether you're a beginner or a veteran \u2014 there's always room to sharpen your game.\n\nWhat tip would YOU add? Drop it in the comments!",
+    "hashtags": "#PoolTips #BilliardsEducation #BreakShot #BreakerBilliards #PoolLife #LearnBilliards #PoolHall",
+    "ig_format": "Carousel (5 slides) \u2014 Tip card style",
+    "ig_how": "Build in Canva. Slide 1: 'How to Master Your Break Shot' on brand-color background. Slides 2-4: one tip per slide with a photo of the demonstration. Slide 5: 'Try it at Breaker \u2014 book a table.' Educational carousels are SAVE goldmines on IG, which boost reach.",
+    "ig_specs": "4:5 vertical, 1080x1350. Use the same template across all 5 slides for cohesion. Include a 'swipe \u2192' indicator on slide 1.",
+    "tt_format": "30s overhead tutorial",
+    "tt_how": "Top-down camera angle on a real table (phone propped above on a tripod or stack of books). Demonstrate each tip in real time with bold text overlays. NO music \u2014 use ambient pool hall sounds. End with 'come practice at Breaker.'",
+    "tt_specs": "9:16, 21\u201330s. Native upload. Add 'Pool Tip' as the first text overlay \u2014 searchable and saveable.",
+    "fb_format": "SKIP feed post \u2014 repurpose for Stories",
+    "fb_how": "Educational tip content underperforms in the FB feed (low share rate). Better deployed as a Story or saved for the Tournament announcement push. Repost the IG carousel slides as FB Stories one-by-one.",
+    "fb_specs": "N/A in feed. Stories only."
+  },
+  {
+    "date": "29",
+    "day": "Tue",
+    "month": "APR",
+    "platforms": [
+      "ig",
+      "fb",
+      "tt"
+    ],
+    "type": "special",
+    "title": "College Night \u2014 Official Announcement",
+    "concept": "High-energy graphic and short video targeting the college crowd. Show ID, get specials. Make it feel exclusive.",
+    "ig_caption": "Attention students: your wallet is safe here. \ud83c\udf93\ud83c\udfb1\n\nCollege Night at Breaker Billiards \u2014 show your valid student ID and unlock exclusive deals on drinks AND table time. Because you've earned it.\n\nDetails \ud83d\udc46 bio | Tag your study group \ud83d\udc47",
+    "tt_caption": "College Night at Breaker Billiards hits different \ud83c\udf93\ud83c\udfb1 Show your student ID and the savings are REAL. Tag your roommate who needs to come through #CollegeNight #StudentDeals #PoolHall #BreakerBilliards #CollegeTok",
+    "fb_caption": "\ud83d\udcda\ud83c\udfb1 COLLEGE NIGHT AT BREAKER BILLIARDS \ud83d\udcda\ud83c\udfb1\n\nStudents \u2014 show your valid college ID and enjoy special pricing on table time AND drinks. Because you work hard enough. Time to play hard too.\n\nShare this with every college student you know! \ud83d\udccd [Address]",
+    "hashtags": "#CollegeNight #StudentDiscount #BreakerBilliards #NJCollege #CollegeLife #PoolHall #StudentLife #CollegeDeals",
+    "ig_format": "Carousel: graphic + venue photos",
+    "ig_how": "Slide 1: bold Canva graphic 'COLLEGE NIGHT' with day, time, and 'show your ID' as the headline. Slides 2-4: real photos of students playing pool, drinks, the bar. Brand colors throughout. The graphic is the hook, the photos are the proof.",
+    "ig_specs": "4:5 vertical. Slide 1 graphic should be readable from a small thumbnail. Day/time = 70% of slide 1 visual weight.",
+    "tt_format": "15s 'POV' college energy clip",
+    "tt_how": "Film a quick clip of college-aged customers (with permission) playing pool, paying with student ID, getting a drink. Fast cuts, trending college TikTok audio (search 'college fyp'). Caption hook: 'POV: it's College Night and your wallet is safe.' Tag NJ-area schools (Rutgers, Montclair State, etc.).",
+    "tt_specs": "9:16, 15\u201321s. Energy must be HIGH. Native upload. Geo-tag Clifton + use #NJCollege.",
+    "fb_format": "Same Canva graphic + share-encouraging caption",
+    "fb_how": "Post the Canva graphic as the main image (FB will display it large). The FB caption asks people to TAG college students they know \u2014 parents are on FB and will tag their kids. This is how you reach the college audience THROUGH their parents on Facebook.",
+    "fb_specs": "Square or 4:5 graphic. Boost-eligible \u2014 a $20 boost targeted at NJ college zip codes goes a long way."
+  },
+  {
+    "date": "30",
+    "day": "Wed",
+    "month": "APR",
+    "platforms": [
+      "tt",
+      "ig"
+    ],
+    "type": "comedy",
+    "title": "Sketch: When the 8-Ball Goes In Early",
+    "concept": "Slow-motion drama of accidentally sinking the 8-ball. Grief. Despair. The walk of shame back to the seat. Comedy gold.",
+    "ig_caption": "Moment of silence for everyone who's ever sunk the 8-ball early. \ud83d\ude14\u26ab\n\nWe've all been there. It hurts. We understand.\n\nThe only cure? Coming back and trying again. \ud83c\udfb1 Book a table \u2014 link in bio.",
+    "tt_caption": "Sinking the 8-ball early is a kind of trauma \ud83d\ude2d\u26ab The absolute SILENCE in the room\u2026 the walk of shame back to your seat\u2026 \ud83d\ude02 Has this happened to you?? #8Ball #PoolFails #BilliardsLife #BreakerBilliards #PoolHumor",
+    "fb_caption": "\ud83d\ude2d To everyone who has ever sunk the 8-ball before clearing your side \u2014 we SEE you. We FEEL you. Come in and redeem yourself. We have tables with your name on them. \ud83c\udfb1\n\nTag someone who needs this right now. \ud83d\ude02",
+    "hashtags": "#8BallFail #PoolHumor #BilliardsComedy #BreakerBilliards #PoolLife #GameFails #Relatable",
+    "ig_format": "Reel \u2014 slow-motion comedy",
+    "ig_how": "Film with phone slow-mo (240fps). The 8-ball drop in the pocket \u2192 slow zoom on the actor's devastated face \u2192 slow-mo walk back to the chair. Add a sad orchestral audio (trending 'Adagio for Strings'-style). Comedy is in the contrast between the dramatic music and the silly situation.",
+    "ig_specs": "9:16 Reel, 15\u201320s. The slower the better \u2014 let each emotional beat breathe.",
+    "tt_format": "15s native \u2014 same concept, faster cuts",
+    "tt_how": "TikTok needs FASTER slow-mo (10s max for the entire bit). Hook in first second: '8-ball trauma is REAL.' Use the trending devastated/sad audio of the moment. Native upload \u2014 don't reuse the IG export, the TikTok algorithm penalizes cross-platform watermarks.",
+    "tt_specs": "9:16, 12\u201318s. Captions burned in: 'When you sink the 8 too early.' End with venue logo flash.",
+    "fb_format": "SKIP feed \u2014 Stories only",
+    "fb_how": "Quick joke content doesn't earn a feed slot on FB. Save the feed real estate for tournament/cocktail content. This goes to FB Stories as a 24-hour micro-touch.",
+    "fb_specs": "N/A feed. Stories only \u2014 same Reel works."
+  },
+  {
+    "date": "1",
+    "day": "Thu",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb"
+    ],
+    "type": "bar",
+    "title": "May Cocktail Feature: Pineapple Mango Mojito",
+    "concept": "Summer kickoff. Tropical visuals \u2014 pineapple, mango, fresh mint. 'May is here and so are the good drinks.'",
+    "ig_caption": "May is here. The Pineapple Mango Mojito is ready. \ud83c\udf4d\ud83e\udd6d\n\nCaptain Morgan Pineapple Rum \u00b7 Lime Juice \u00b7 Mango Pur\u00e9e \u00b7 Mojito Mix \u00b7 Fresh Mint Leaves\n\nSummer is calling and this drink picks up every time. See you at the bar. \ud83c\udfb1",
+    "tt_caption": "The Pineapple Mango Mojito just became your new summer obsession \ud83c\udf4d\ud83e\udd6d\u2728 Come try it at Breaker Billiards \u2014 it goes DOWN. #MojitoTok #CocktailTok #SummerDrinks #BreakerBilliards #PineappleMango",
+    "fb_caption": "\ud83c\udf4d\ud83e\udd6d HELLO MAY! \ud83e\udd6d\ud83c\udf4d\n\nKick off the new month with our Pineapple Mango Mojito \u2014 it tastes like summer in a glass.\n\nCaptain Morgan Pineapple Rum \u00b7 Fresh Mint \u00b7 Mango Pur\u00e9e \u00b7 Lime Juice \u00b7 Mojito Mix\n\nCome in this week and treat yourself! \ud83c\udfb1",
+    "hashtags": "#PineappleMangoMojito #CocktailOfTheMonth #SummerDrinks #BreakerBilliards #MojitoSeason #NJBar #CraftCocktail",
+    "ig_format": "Reel \u2014 tropical cocktail build",
+    "ig_how": "Bright natural light if possible. Film the build: rum pour over crushed ice, mango pur\u00e9e swirl, mint slap (literally clap the mint between palms before placing \u2014 releases oils + looks great on camera), final lime wedge. Use a summer/Caribbean trending audio. Color grade slightly warm for tropical feel.",
+    "ig_specs": "9:16 Reel, 20\u201330s. The mint slap is the moneyshot \u2014 frame it tightly.",
+    "tt_format": "SKIP \u2014 repurpose to IG only this round",
+    "tt_how": "You're spotlighting too many cocktails on TikTok already this week. Variety wins on TT. Skip and let the IG/FB carry this one. Save TT energy for the Friday timelapse.",
+    "tt_specs": "N/A \u2014 see weekly cadence playbook.",
+    "fb_format": "Hero photo + ingredient breakdown",
+    "fb_how": "Single SHARP photo of the finished cocktail in golden hour light at the bar. Caption breaks down the ingredients with a 'taste of summer' angle. Always announce on FB the FIRST week of a new month \u2014 Facebook users plan their nights weeks in advance.",
+    "fb_specs": "4:5 vertical photo. Caption length: 100\u2013200 words. Include 'cocktail of the month' framing for repeatable content series."
+  },
+  {
+    "date": "2",
+    "day": "Fri",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "billiards",
+    "title": "Friday Table Timelapse",
+    "concept": "Time-lapse from open to packed. Show Friday night building energy. Strong visual hook.",
+    "ig_caption": "This is what Friday looks like at Breaker. \ud83c\udfb1\ud83d\udd35\n\nFrom empty tables to a packed house \u2014 every Friday night writes its own story. What chapter will you add tonight?\n\n\ud83d\udccd [Address] | Open late \ud83d\udd59",
+    "tt_caption": "Friday night at Breaker Billiards goes from 0 to 100 REAL quick \ud83c\udfb1\ud83d\udd25 Tables fill up fast \u2014 come through tonight! #FridayNight #PoolHall #BreakerBilliards #WeekendVibes #NightOut",
+    "fb_caption": "\ud83c\udfb1 FRIDAY NIGHT IS HERE \ud83c\udfb1\n\nThe tables are waiting. The drinks are poured. The music is on. All that's missing is YOU.\n\nBring the crew tonight \u2014 Breaker Billiards is the spot. \ud83d\udccd [Address] | Open until [time]",
+    "hashtags": "#FridayNight #WeekendVibes #BreakerBilliards #PoolHall #NJNightlife #TableLife #FridayFun",
+    "ig_format": "Reel \u2014 true timelapse",
+    "ig_how": "Set a phone on a tripod in a fixed position (corner with full room view). Use the iPhone Time-Lapse mode for 4\u20136 hours starting from open. Export and trim to 30s. Add a hype audio that builds (find one with a clear drop). Post Saturday morning as 'last night looked like this.'",
+    "ig_specs": "9:16, 30s. Tripod is ESSENTIAL \u2014 handheld ruins the timelapse effect.",
+    "tt_format": "15s timelapse + hype edit",
+    "tt_how": "Speed up the timelapse even more for TT (15s max). First frame must show the empty room \u2014 payoff is the packed room. Use a trending hype audio with a clear beat drop matched to the 'packed' reveal moment.",
+    "tt_specs": "9:16, 12\u201315s. Native upload Saturday morning 9\u201310am for weekend recap discoverability.",
+    "fb_format": "Cross-post the Reel + photo dump",
+    "fb_how": "Cross-post the Reel via Meta Business Suite. ALSO post 5\u20137 still photos from throughout the night as a separate carousel. FB rewards businesses that post multiple times per high-traffic day (like Saturday).",
+    "fb_specs": "Reel + carousel combo. Two separate posts within 4 hours of each other."
+  },
+  {
+    "date": "3",
+    "day": "Sat",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt"
+    ],
+    "type": "comedy",
+    "title": "Sketch: Trick Shot Gone Wrong",
+    "concept": "Attempt at a viral trick shot that goes hilariously sideways. Authentic, unscripted. Real staff or customers attempting cool shots and failing.",
+    "ig_caption": "We tried. We really, truly tried. \ud83d\ude2d\ud83c\udfb1\n\nNot every trick shot is going to land. But the attempt? Always worth it. Come add your fails to the collection. \ud83d\ude02\n\n(Save for next time you need a laugh)",
+    "tt_caption": "Trick shot attempt: 1/10 \ud83c\udfb1\ud83d\ude02 The confidence before. The silence after. We're doing this again tomorrow. Who thinks they can do better? #TrickShot #PoolFails #BilliardsLife #BreakerBilliards #TryAgain",
+    "fb_caption": "\ud83d\ude02 TRICK SHOT ATTEMPT OF THE WEEK \ud83d\ude02\n\nWe respect the effort. The form was\u2026 there. The result was not.\n\nWho thinks they can do better? Come in and prove it! \ud83c\udfb1 Tag your most confident friend.",
+    "hashtags": "#TrickShot #PoolFails #BilliardsComedy #BreakerBilliards #PoolLife #FunnyFails #TryAgain",
+    "ig_format": "Reel \u2014 fail compilation",
+    "ig_how": "Film 5\u20136 attempts at the same trick shot. Edit them together fast \u2014 fail, fail, fail, ALMOST, fail. The build-up to the almost-success is the joke. Use a 'building suspense \u2192 flat trombone' style audio. KEEP the real reactions.",
+    "ig_specs": "9:16 Reel, 20\u201330s. Authentic > polished here. The blooper feel is the point.",
+    "tt_format": "30s native fail compilation",
+    "tt_how": "TikTok loves authentic fail content. Same edit, but use a trending 'this isn't going well' audio. The TT title overlay should set up expectations: 'Trying the viral trick shot at the pool hall.' Then deliver the fails. Native upload only.",
+    "tt_specs": "9:16, 21\u201334s. Don't overpolish. Real reactions = comments = boost.",
+    "fb_format": "Cross-post Reel only",
+    "fb_how": "Quick fail content cross-posts well to FB but doesn't deserve its own caption rewrite. Auto-share via Business Suite with a one-line caption: 'Trick shots at Breaker Billiards: undefeated against us. \ud83d\ude02'",
+    "fb_specs": "Reel cross-post only. Short caption."
+  },
+  {
+    "date": "4",
+    "day": "Sun",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb"
+    ],
+    "type": "special",
+    "title": "Ladies Night \u2014 Full Details Revealed",
+    "concept": "Full reveal post for Ladies Night. Specific day, time, deals. Eye-catching brand-color graphic. CTA post \u2014 drive RSVPs and shares.",
+    "ig_caption": "\ud83d\udc51 LADIES NIGHT IS OFFICIAL \ud83d\udc51\n\n[DAY] nights at Breaker Billiards are YOURS. Ladies get [SPECIALS \u2014 e.g., half off table time, drink specials, etc.]\n\nBring your girls. Leave the stress. Play pool like a queen. \ud83c\udfb1\n\nDetails: [DATE / TIME / ADDRESS]\n\nShoot Pool. Not People. \ud83d\udc99",
+    "tt_caption": "Ladies Night at Breaker Billiards is HERE and it's giving everything \ud83d\udc51\ud83c\udfb1 Come through and claim your night queens \ud83d\udc99 #LadiesNight #GirlsNightOut #BreakerBilliards #NJNightlife #QueenSzn",
+    "fb_caption": "\ud83d\udc51\ud83d\udc51 LADIES NIGHT \u2014 OFFICIAL DETAILS \ud83d\udc51\ud83d\udc51\n\nEvery [DAY] night, ladies get [SPECIALS]. Pool, cocktails, and an energy that's all your own.\n\nShare this with every queen you know and get that group chat going! \ud83d\udccd [Address]",
+    "hashtags": "#LadiesNight #GirlsNightOut #BreakerBilliards #NJNightlife #LadiesWhoPlay #PoolHall #QueenVibes",
+    "ig_format": "Carousel: graphic + lifestyle photos",
+    "ig_how": "Slide 1: bold Canva announcement graphic \u2014 'LADIES NIGHT' headline, day/time/specials in clear hierarchy. Slides 2-5: real photos of women playing pool at Breaker, cocktails being made, group laughs. Brand colors throughout. The graphic announces, the photos prove it.",
+    "ig_specs": "4:5 vertical carousel. Slide 1 must be readable as a thumbnail. Use Reels Audio if you want extra reach via the audio tab.",
+    "tt_format": "SKIP \u2014 repurpose to Stories",
+    "tt_how": "Announcement graphics underperform on TT (low motion = low retention). Save the energy for next week's Ladies Night Recap which will have the actual social proof footage.",
+    "tt_specs": "N/A \u2014 Stories only.",
+    "fb_format": "Same graphic + detailed event-style caption",
+    "fb_how": "Post the Canva graphic large. The FB caption is the workhorse \u2014 list every specific detail (day, exact time, all specials, how to RSVP, parking info if relevant). FB users want logistics. This is also a good post to BOOST with $30\u201350 targeted at women 21\u201345 in Clifton/Passaic county.",
+    "fb_specs": "Square graphic. Caption: 200\u2013400 words. Boost-eligible. Create a Facebook Event for it too \u2014 events show up in local discovery."
+  },
+  {
+    "date": "5",
+    "day": "Mon",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt"
+    ],
+    "type": "billiards",
+    "title": "Pool Tip: The Ghost Ball Aiming Method",
+    "concept": "Educational billiards content \u2014 ghost ball technique explained visually. Clean overlay on top-down table shot. Saveable, shareable.",
+    "ig_caption": "Level up your aim. \ud83c\udfaf\ud83c\udfb1\n\nThe Ghost Ball Method is the most reliable aiming technique for beginner and intermediate players. Visualize where the cue ball needs to be at contact \u2014 that's your ghost ball.\n\nSave this. Try it at your next visit. Your game will thank you.",
+    "tt_caption": "The aiming method that changed my pool game forever \ud83c\udfaf\ud83c\udfb1 Try the ghost ball method and watch your accuracy skyrocket \ud83d\udcc8 #PoolTips #BilliardsLife #BreakerBilliards #AimingTips #PoolTok #LearnBilliards",
+    "fb_caption": "\ud83c\udfaf POOL TIP: THE GHOST BALL METHOD \ud83c\udfaf\n\nThis technique has helped thousands of players dramatically improve their aim. Save this post and try it out at Breaker Billiards!\n\nWhat's YOUR go-to aiming method? Drop it in the comments \ud83d\udc47",
+    "hashtags": "#PoolTips #GhostBall #BilliardsEducation #BreakerBilliards #AimTips #PoolLife #BilliardsTips",
+    "ig_format": "Carousel (5 slides) \u2014 diagram-style tip",
+    "ig_how": "Top-down photo of a real table setup at Breaker. Use Canva or Procreate to overlay the 'ghost ball' as a translucent circle showing where to aim. Slide 1: 'How to aim like a pro.' Slide 2-4: the technique broken down. Slide 5: 'Try it tonight at Breaker.' Educational carousels are SAVE-heavy.",
+    "ig_specs": "4:5 vertical, 1080x1350. The ghost ball overlay must be visually obvious \u2014 use bright contrast.",
+    "tt_format": "30s tutorial \u2014 overhead angle",
+    "tt_how": "Phone propped overhead on a tripod. Demonstrate the technique on a real table. Bold text overlays explain each beat. NO music \u2014 pool hall ambient sounds. End with 'Practice this at Breaker.' This style of content lives on the TT search algo for months.",
+    "tt_specs": "9:16, 21\u201330s. Native upload. Use 'Pool Tutorial' as the first text overlay for searchability.",
+    "fb_format": "SKIP feed \u2014 Stories only",
+    "fb_how": "Educational tip content underperforms in FB feed. Reuse the IG carousel as Stories one slide at a time. Save FB feed bandwidth for the Espresso Martini and the Tournament announcement later this week.",
+    "fb_specs": "N/A feed. Stories only."
+  },
+  {
+    "date": "6",
+    "day": "Tue",
+    "month": "MAY",
+    "platforms": [
+      "tt",
+      "ig",
+      "fb"
+    ],
+    "type": "comedy",
+    "title": "Sketch: Ordering Your First Cocktail at Breaker",
+    "concept": "Customer overwhelmed by the menu making increasingly dramatic drink choices. Ends with the House Rack and loving it. Brand humor.",
+    "ig_caption": "Every first-timer at the Breaker cocktail menu, ever. \ud83d\ude02\ud83c\udf79\n\nDon't worry \u2014 the bartenders will guide you. And honestly? Whatever you pick is going to slap.\n\nOur suggestion: start with the House Rack. You're welcome. \ud83c\udfb1",
+    "tt_caption": "Me at the Breaker Billiards cocktail menu for the first time \ud83d\ude02\ud83c\udf79 There are TOO many good options and I simply cannot choose. The House Rack saved me. #CocktailMenu #BarTok #BreakerBilliards #Relatable #NJBar",
+    "fb_caption": "\ud83d\ude02 The struggle is REAL when you see our cocktail menu for the first time. Don't know where to start? Ask your bartender for the House Rack \u2014 it's a crowd favorite for a reason! \ud83c\udf79\ud83c\udfb1\n\nWhat's YOUR go-to Breaker cocktail? Comment below!",
+    "hashtags": "#CocktailComedy #BarHumor #BreakerBilliards #HouseRack #DrinkMenu #NJBar #CocktailLovers",
+    "ig_format": "Reel \u2014 sketch",
+    "ig_how": "Film at the bar. Customer reads menu, gets visibly more confused, makes dramatic 'I'll have\u2026 THIS' decisions, finally lands on the House Rack and loves it. Cut between customer face and bartender's patient reaction. Comedy is in the editing rhythm.",
+    "ig_specs": "9:16 Reel, 30\u201345s. Use jump cuts. End with the House Rack hero shot.",
+    "tt_format": "45s native sketch",
+    "tt_how": "Same sketch but film natively in TikTok app. Use the trending 'overthinking everything' audio. Caption hook: 'POV: first time ordering at Breaker.' Burn in subtitles. End with a 1-second 'try the House Rack' call-out.",
+    "tt_specs": "9:16, 30\u201345s. Native upload. Subtitles required.",
+    "fb_format": "Cross-post Reel + question-prompt caption",
+    "fb_how": "Cross-post via Business Suite. The FB-specific caption ASKS people to comment their go-to drink. Comments boost reach algorithmically. Replies turn the post into a conversation that runs for days.",
+    "fb_specs": "Reel cross-post. Caption length: 80\u2013120 words ending in a question."
+  },
+  {
+    "date": "7",
+    "day": "Wed",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb"
+    ],
+    "type": "bar",
+    "title": "Espresso Martini Wednesday",
+    "concept": "Hump day calls for espresso AND vodka. Feature mid-week. Coffee culture meets bar culture.",
+    "ig_caption": "Wednesday calls for a double shot of everything. \u2615\ud83c\udf78\n\nThe Espresso Martini: Stoli Vanilla \u00b7 Bailey's \u00b7 Kahlua \u00b7 Fresh Brewed Coffee\n\nAsk nicely and we'll make yours with a little extra love. \u2615\ud83d\udc99\n\nMidweek, sorted.",
+    "tt_caption": "Espresso martini for the mid-week slump \u2615\ud83c\udf78 Fresh brewed coffee + Stoli Vanilla + Bailey's + Kahlua = Wednesday fixed. Come get yours at Breaker! #EspressoMartini #CocktailTok #HumpDay #BreakerBilliards",
+    "fb_caption": "\u2615\ud83c\udf78 WEDNESDAY FEATURE: THE ESPRESSO MARTINI \u2615\ud83c\udf78\n\nFresh Brewed Coffee \u00b7 Stoli Vanilla \u00b7 Bailey's \u00b7 Kahlua\n\nBecause some days you need a pick-me-up AND a wind-down \u2014 all in one glass. Come in tonight! \ud83d\udccd",
+    "hashtags": "#EspressoMartini #CocktailWednesday #WednesdayVibes #BreakerBilliards #NJBar #CoffeeCocktail #HumpDay",
+    "ig_format": "Reel \u2014 the foam pour moneyshot",
+    "ig_how": "Espresso martinis ARE foam content. Film the shake (close-up, hear the ice rattle), then the pour into the coupe glass \u2014 capture the foam settling on top in slow motion. That foam shot IS the post. Trending coffee/cocktail audio.",
+    "ig_specs": "9:16 Reel, 15\u201320s. The foam settling shot must be at LEAST 3 seconds. That's the saveable, shareable moment.",
+    "tt_format": "SKIP \u2014 IG/FB carry this one",
+    "tt_how": "You're already running the Margarita TT later this week. Don't oversaturate cocktails on TT \u2014 comedy and tips are the variety this week. Save the bandwidth.",
+    "tt_specs": "N/A.",
+    "fb_format": "Single hero photo + recipe",
+    "fb_how": "Take the SHARPEST still from the Reel shoot \u2014 ideally the foam-topped finished glass with bar lighting in the background. Post large. Caption breaks down the recipe and frames it as a 'Wednesday ritual.' Mid-week posts on FB have less competition for attention.",
+    "fb_specs": "Square or 4:5 photo. Caption: 100\u2013200 words."
+  },
+  {
+    "date": "8",
+    "day": "Thu",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "special",
+    "title": "College Night Hype + Social Proof",
+    "concept": "Second college night push. Show real reactions, people having a blast. Social proof + FOMO. Authentic, not promotional.",
+    "ig_caption": "The students have spoken and the verdict is unanimous. \ud83c\udf93\ud83c\udfb1\n\nCollege Night at Breaker Billiards = best decision of the semester. Show your student ID. Get the deals. Have the best time.\n\nTag a classmate who needs to come through \ud83d\udc47",
+    "tt_caption": "College Night at Breaker Billiards >>> your other Thursday plans \ud83c\udf93\ud83c\udfb1 Student ID = DEALS. It's literally that simple. Tell your whole dorm. #CollegeNight #StudentLife #BreakerBilliards #NJCollege #PoolHall",
+    "fb_caption": "\ud83c\udf93 COLLEGE NIGHT REMINDER \ud83c\udfb1\n\nEvery [DAY], college students get exclusive pricing on table time and drinks \u2014 just show your student ID!\n\nShare this with every college student in your life. Finals are over. Time to PLAY. \ud83d\udccd [Address]",
+    "hashtags": "#CollegeNight #StudentLife #BreakerBilliards #NJCollege #StudentDiscount #PoolHall #CollegeDeals",
+    "ig_format": "Reel: real footage from previous College Night",
+    "ig_how": "Pull 8\u201310 quick clips from your last College Night (with permission from anyone identifiable). Edit FAST cuts to a college-coded trending audio. The vibe is the message \u2014 don't over-explain. End with 'Tonight. Show your ID.'",
+    "ig_specs": "9:16 Reel, 20\u201330s. Pin to grid for the day.",
+    "tt_format": "15s 'POV' authentic clip",
+    "tt_how": "Same source footage cut even faster. First frame: a packed table with college-aged players. Trending TikTok 'we eating good' or college energy audio. Caption: 'POV: it's College Night and your wallet is safe.' Native upload.",
+    "tt_specs": "9:16, 12\u201318s. Geo-tag NJ college zip codes. Tag schools (Rutgers, Montclair, Felician, etc.).",
+    "fb_format": "Photo dump (5\u20137) + tag-encouraging caption",
+    "fb_how": "Pull the BEST 5\u20137 stills from the College Night footage. Carousel post on FB. Caption asks parents/aunts/uncles to TAG their college students \u2014 this is how you reach Gen Z THROUGH their family on Facebook. It works.",
+    "fb_specs": "Square or 4:5 photo carousel. 5\u20137 images. Caption: 100\u2013150 words ending in 'tag a college student' prompt."
+  },
+  {
+    "date": "9",
+    "day": "Fri",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "milestone",
+    "title": "\ud83d\udd14 3-Month Anniversary TEASER",
+    "concept": "Build anticipation for tomorrow's milestone. 'Something big is coming tomorrow.' Countdown energy. Drive follows and check-ins.",
+    "ig_caption": "3 months. \ud83c\udfb1\n\nTomorrow we celebrate something special. Something that started as a dream and became YOUR favorite spot.\n\nStay tuned. You don't want to miss this one. \ud83d\udd35\u2b50",
+    "tt_caption": "Tomorrow is a BIG day at Breaker Billiards \ud83c\udfb1\u2b50 Follow us RIGHT NOW so you don't miss the announcement. Something special is coming. #BreakerBilliards #Anniversary #StayTuned #PoolHall #ThreeMonths",
+    "fb_caption": "\ud83c\udfb1 SOMETHING SPECIAL IS COMING TOMORROW \ud83c\udfb1\n\nThree months ago, a dream became a reality. Tomorrow, we celebrate with YOU.\n\nMake sure you're following us \u2014 and even better, come in tomorrow night. It's going to be a good one. \ud83d\udc40\n\nShare this so everyone knows!",
+    "hashtags": "#ComingSoon #BreakerBilliards #Anniversary #ThreeMonths #StayTuned #NJNightlife #PoolHall",
+    "ig_format": "Single image \u2014 bold teaser graphic",
+    "ig_how": "Canva graphic. Pure Breaker brand: navy background, electric blue '3 MONTHS' as the headline, small text underneath: 'tomorrow.' That's it. Mystery sells. The minimal design is the point.",
+    "ig_specs": "4:5 vertical, 1080x1350. Add to Stories simultaneously with countdown sticker.",
+    "tt_format": "15s countdown clip",
+    "tt_how": "Quick montage of behind-the-scenes moments from the past 3 months \u2014 venue setup, first pour, packed nights \u2014 ending on a black screen with '3 months. tomorrow.' Build with mysterious/anticipatory audio. Native upload.",
+    "tt_specs": "9:16, 12\u201318s. Use TikTok's countdown sticker on the post for added mystery.",
+    "fb_format": "Same teaser graphic + curiosity caption",
+    "fb_how": "Post the same Canva teaser graphic. The FB caption asks 'What do you think it is?' to drive comments and engagement before the reveal. Engagement on the teaser boosts reach for the actual reveal post tomorrow.",
+    "fb_specs": "Square or 4:5 graphic. Caption: 60\u2013100 words. Question prompt at the end."
+  },
+  {
+    "date": "10",
+    "day": "Sat",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "milestone",
+    "title": "\ud83c\udfc6 THREE MONTHS OPEN \u2014 ANNIVERSARY POST",
+    "concept": "HERO POST. Full celebration \u2014 best moments collage, heartfelt thank-you to community, special offer today only. The most important post of the entire 30 days.",
+    "ig_caption": "THREE MONTHS. \ud83c\udfb1\ud83d\udd35\ud83c\udfc6\n\nThree months ago we opened these doors with one goal: to give this community a place to shoot pool, sip something great, and leave everything else at the door.\n\nYou showed up. You filled these tables. You made Breaker Billiards what it is.\n\nThank you. From the bottom of our hearts \u2014 THANK YOU.\n\nTonight, we're celebrating with YOU. Come in, mention this post, and [SPECIAL OFFER \u2014 e.g., first hour free / drink special].\n\nShoot Pool. Not People. \ud83d\udc99\n\n\ud83d\udccd [Address] | Open tonight until [time]",
+    "tt_caption": "3 MONTHS AGO WE OPENED AND LOOK WHAT WE BUILT \ud83c\udfb1\ud83c\udfc6\ud83d\udc99 From day one to right now \u2014 this is YOUR place and we are SO grateful. Come celebrate with us TONIGHT. #3Months #BreakerBilliards #Anniversary #ThankYou #PoolHall #Milestone",
+    "fb_caption": "\ud83c\udfc6\ud83c\udfb1 THREE MONTHS OF BREAKER BILLIARDS \ud83c\udfb1\ud83c\udfc6\n\nWe did it. Three months of pool, cocktails, laughter, competition, and community \u2014 and we're just getting started.\n\nTo every single person who has walked through our doors: THANK YOU. You are the reason we show up every single day.\n\nCome celebrate with us tonight \u2014 mention this post for a special thank-you from us to you. \ud83d\udd35\ud83d\udc99\n\n\ud83d\udccd [Address] | [Hours]\n\nShare this post \u2014 let's pack the house tonight! \ud83c\udf89",
+    "hashtags": "#ThreeMonths #Anniversary #BreakerBilliards #ThankYou #ShootPoolNotPeople #NJNightlife #PoolHall #Milestone #3MonthsStrong #CommunityLove",
+    "ig_format": "Carousel (8\u201310 slides) + Reel",
+    "ig_how": "DOUBLE POST today. Carousel: slide 1 hero anniversary graphic, slides 2-9 are the BEST single moments from 3 months (a great game, a packed bar, the first night, a regular customer with permission). Slide 10: brand-color thank-you graphic with the offer + address. Then ALSO post a 60s emotional Reel set to a heartfelt audio \u2014 same source footage, different format.",
+    "ig_specs": "Carousel 4:5. Reel 9:16, 60s. Post carousel mid-day, Reel evening. Both pinned to grid.",
+    "tt_format": "60s emotional anniversary edit",
+    "tt_how": "This is the ONE TT video this week that gets a real production budget of time. 60 seconds, source footage from all 3 months, set to a heartfelt/grateful trending audio. Burn in '3 months' text over key moments. End with the offer + 'tonight.' Native upload.",
+    "tt_specs": "9:16, 50\u201360s. Native. Use TT's location feature. Pin to profile for the week.",
+    "fb_format": "Carousel + boosted post",
+    "fb_how": "Post the same carousel from IG. THIS POST GETS A BOOST \u2014 $50\u2013100 targeted at Clifton/Passaic county adults 25\u201355. FB will deliver more reach for an emotional milestone post than any other type. Encourage shares in the caption.",
+    "fb_specs": "4:5 carousel. Boost. Add it to a Facebook Event if hosting in-venue celebration."
+  },
+  {
+    "date": "11",
+    "day": "Sun",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb"
+    ],
+    "type": "billiards",
+    "title": "Anniversary Weekend Wrap-Up",
+    "concept": "Heartfelt recap of the anniversary celebration. Thank the community. Sunday reflection energy.",
+    "ig_caption": "Last night was everything. \ud83d\udc99\ud83c\udfb1\n\nThe energy, the people, the shots \u2014 thank you to everyone who came out to celebrate 3 months with us. This community is something special and we don't take it for granted.\n\nSee you all again soon. The tables are always ready. \ud83d\udd35",
+    "tt_caption": "Recap of our 3-month anniversary party and WOW \ud83c\udfb1\ud83d\udc99\ud83d\ude2d You all showed OUT. Thank you from the bottom of our hearts. #BreakerBilliards #Anniversary #ThankYou #Recap #PoolHall #Community",
+    "fb_caption": "\ud83d\udc99 THANK YOU THANK YOU THANK YOU \ud83d\udc99\n\nLast night's 3-month celebration was beyond anything we imagined. To every person who came out, shared the post, or sent a kind word \u2014 you ARE Breaker Billiards.\n\nHere's to the next 3 months and beyond. See you soon! \ud83c\udfb1",
+    "hashtags": "#ThankYou #BreakerBilliards #Anniversary #Community #PoolHall #Grateful #NJNightlife",
+    "ig_format": "Carousel: photo dump from the anniversary night",
+    "ig_how": "Pull 8\u201310 BEST photos from the actual anniversary celebration. With permission, include faces \u2014 community wants to see themselves. Color grade for warmth. The carousel format invites people to swipe through and find themselves. Tag everyone visible if possible.",
+    "ig_specs": "4:5 carousel. 8\u201310 photos. Tagged.",
+    "tt_format": "SKIP \u2014 Stories only",
+    "tt_how": "Recap photo content underperforms on TT (low motion). Save the energy for the upcoming sketches. Run the photos as a Stories highlight reel instead.",
+    "tt_specs": "N/A.",
+    "fb_format": "Photo dump carousel + heartfelt caption",
+    "fb_how": "Same photos as IG. FB caption is more conversational and personal \u2014 write it like a letter to the community. FB users will share these photos to their own profiles when they see themselves. Massive organic reach.",
+    "fb_specs": "Square or 4:5 carousel. 8\u201310 photos. Caption: 200\u2013300 words."
+  },
+  {
+    "date": "12",
+    "day": "Mon",
+    "month": "MAY",
+    "platforms": [
+      "tt",
+      "ig"
+    ],
+    "type": "comedy",
+    "title": "Sketch: Pool Shark vs. The Tourist",
+    "concept": "Hustler vs. clueless newcomer. The hustle is on \u2014 until the newcomer turns out to be a secret shark. Plot twist comedy.",
+    "ig_caption": "Not all 'beginners' are actually beginners. \ud83d\ude0f\ud83c\udfb1\n\nThis is why you never assume at the table. Every player has a story \u2014 some are just hiding it really, really well. \ud83d\ude02\n\nCome find out where YOU rank at Breaker Billiards.",
+    "tt_caption": "Pool shark vs the tourist who 'has never played before' \ud83d\ude02\ud83c\udfb1 The PLOT TWIST at the end got me \ud83d\udc80 #PoolShark #BilliardsLife #BreakerBilliards #PlotTwist #PoolHumor #Relatable",
+    "fb_caption": "\ud83d\ude02 Never judge a player by their first shot. EVER. \ud83c\udfb1\n\nTag someone who acts like they've never held a cue \u2014 then proceeds to run the table. We all know that person. \ud83d\ude02\n\nCome prove your game at Breaker Billiards! \ud83d\udccd",
+    "hashtags": "#PoolShark #HustleGame #BilliardsComedy #BreakerBilliards #PoolLife #NeverJudge #GameFace",
+    "ig_format": "Reel \u2014 narrative sketch",
+    "ig_how": "45s narrative arc. Establish the hustler. Establish the 'tourist' fumbling. Reveal the tourist sinking 5 in a row. Cut to hustler face: shock. Two actors, one table. Use a tense music build with a comedic drop at the reveal.",
+    "ig_specs": "9:16 Reel, 30\u201345s. The reveal frame must hit hard \u2014 pause on the tourist's sly smile.",
+    "tt_format": "45s native sketch",
+    "tt_how": "Same sketch but film natively. Hook in first 1.5s: 'POV: you tried to hustle the wrong guy.' Plot twist sketches PERFORM on TT. Pin to your profile if it goes viral.",
+    "tt_specs": "9:16, 30\u201345s. Native. Caption setup matters: setup the hustle in first 5s, deliver in last 10s.",
+    "fb_format": "SKIP feed \u2014 Reel cross-share only",
+    "fb_how": "This sketch is a TT-first piece. FB users get it via cross-share, but it doesn't need its own feed treatment. Run it as a Story too.",
+    "fb_specs": "Reel cross-share or Story only."
+  },
+  {
+    "date": "13",
+    "day": "Tue",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb",
+      "tt"
+    ],
+    "type": "bar",
+    "title": "Rack 'Em Up Margarita Feature",
+    "concept": "Feature the Rack 'Em Up Margarita with flavor add-on highlighted. Mid-week cocktail content \u2014 broad appeal.",
+    "ig_caption": "The Rack 'Em Up Margarita didn't get the memo that the weekend ended. \ud83c\udf79\ud83c\udfb1\n\nEspolon Tequila \u00b7 Lime Juice \u00b7 Triple Sec \u00b7 Sour Mix \u00b7 OJ \u00b7 Lime & Orange Garnish\n\nAdd Strawberry, Mango, or Watermelon Pur\u00e9e for just $1. You're welcome. \ud83d\udd35",
+    "tt_caption": "The Rack 'Em Up Margarita is living rent free in my head \ud83c\udf79\ud83c\udfb1 Add mango pur\u00e9e for $1 and it becomes elite. Trust me on this. #MargaritaTok #BreakerBilliards #CocktailTok #TequilaTime #BarTok",
+    "fb_caption": "\ud83c\udf79 MARGARITA SPOTLIGHT: THE RACK 'EM UP \ud83c\udf79\n\nEspolon Tequila \u00b7 Lime Juice \u00b7 Triple Sec \u00b7 Sour Mix \u00b7 OJ \u00b7 Lime/Orange Garnish\n\nAdd a flavor \u2014 Strawberry, Mango, or Watermelon Pur\u00e9e for just +$1!\n\nCome try yours tonight. \ud83d\udccd",
+    "hashtags": "#RackEmUpMargarita #MargaritaTime #BreakerBilliards #TequilaTuesday #CocktailFeature #NJBar #MargaritaLovers",
+    "ig_format": "Carousel \u2014 3 versions of the margarita",
+    "ig_how": "Hero shot of plain Rack Em Up. Then carousel slides 2-4 are the same drink with strawberry, mango, watermelon pur\u00e9e \u2014 a visual flavor trio. The +$1 add-on visualization is the hook. Cohesive lighting/grading across all 4 slides.",
+    "ig_specs": "4:5 carousel, 4 slides. Each photo from same angle, same lighting, swap only the pur\u00e9e. Visual consistency = professional feel.",
+    "tt_format": "30s flavor swap reveal",
+    "tt_how": "Film the build for the base margarita. Then on camera, demonstrate the flavor swap \u2014 strawberry, mango, watermelon. Each one with a satisfying pur\u00e9e pour. Trending margarita audio. End with 'pick your fighter.'",
+    "tt_specs": "9:16, 21\u201334s. The flavor swap reveal is the moment \u2014 make sure the camera captures the color change clearly.",
+    "fb_format": "Hero photo + ingredient + add-on caption",
+    "fb_how": "Single hero shot of the BEST-LOOKING flavored margarita (probably strawberry \u2014 it's the most photogenic). Caption explains the base recipe AND the $1 add-on with all 3 options listed. FB users want the menu in the caption.",
+    "fb_specs": "4:5 photo. Caption 150\u2013250 words."
+  },
+  {
+    "date": "14",
+    "day": "Wed",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt"
+    ],
+    "type": "billiards",
+    "title": "The Breaker Challenge: 3-in-a-Row",
+    "concept": "UGC drive \u2014 challenge followers to sink 3 consecutive balls. Encourage filming and tagging. Repost the best ones. Creates community AND content.",
+    "ig_caption": "The 3-in-a-Row Challenge is officially live. \ud83c\udfaf\ud83c\udfb1\n\nSink 3 consecutive balls without a miss. Film it. Tag us with #BreakerChallenge \u2014 and we'll repost the best ones.\n\nYour bragging rights await. \ud83d\udc99 Who's accepting?",
+    "tt_caption": "We're officially issuing the 3-in-a-row challenge \ud83c\udfaf\ud83c\udfb1 Sink 3 consecutive, film it, tag us! We're reposting the best ones. Are you up for it?? #BreakerChallenge #PoolChallenge #BilliardsLife #BreakerBilliards",
+    "fb_caption": "\ud83c\udfaf\ud83c\udfb1 THE BREAKER CHALLENGE IS LIVE \ud83c\udfb1\ud83c\udfaf\n\nCan you sink 3 consecutive balls? Come in, film your attempt, and tag us!\n\nWe'll repost the best videos \u2014 and there might just be a prize for the most impressive. \ud83d\ude0f\n\nComment 'I'M IN' if you're accepting the challenge!",
+    "hashtags": "#BreakerChallenge #PoolChallenge #3InARow #BreakerBilliards #UGC #BilliardsLife #ChallengeAccepted",
+    "ig_format": "Reel \u2014 challenge launch with example",
+    "ig_how": "Demo the challenge yourself first. Staff member sinks 3 balls in a row. Then text overlay: 'Now you. Tag us with #BreakerChallenge.' Pin to grid for the duration of the challenge.",
+    "ig_specs": "9:16 Reel, 20\u201330s. Use a hype trending audio \u2014 needs to feel like a challenge invite, not just a demo.",
+    "tt_format": "30s native challenge launch",
+    "tt_how": "Same demo, but the TT version explicitly says 'duet this' or 'use this sound.' Set up the challenge so people can DUET your video with their own attempt. The duet feature multiplies reach exponentially when challenges catch.",
+    "tt_specs": "9:16, 21\u201330s. Native. Use a unique trending sound others can duet to \u2014 branded sounds work best.",
+    "fb_format": "SKIP feed \u2014 Stories + Event",
+    "fb_how": "Challenge UGC content underperforms on FB feed. Better as a Facebook Event ('Breaker Challenge \u2014 submit by [date]') with the Reel embedded. FB events get pushed to the local discovery feed.",
+    "fb_specs": "FB Event format. Embed the Reel."
+  },
+  {
+    "date": "15",
+    "day": "Thu",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb",
+      "tt"
+    ],
+    "type": "special",
+    "title": "Ladies Night Recap + Hype for Next Week",
+    "concept": "Photo/video dump from Ladies Night. Real smiles, cocktails, pool. Social proof drives next week's attendance.",
+    "ig_caption": "Ladies Night was THAT night. \ud83d\udc51\ud83c\udfb1\n\nEvery week we do this and every week it gets better. The energy, the cocktails, the pool games \u2014 this is YOUR space, queens.\n\nNext [DAY] \u2014 we're doing it all again. Bring the whole group. \ud83d\udc99",
+    "tt_caption": "Ladies Night at Breaker Billiards is giving exactly what it's supposed to give \ud83d\udc51\ud83c\udfb1\u2728 Every week. Every time. See you next [DAY] ladies!! #LadiesNight #GirlsNightOut #BreakerBilliards #NJNightlife #QueenVibes",
+    "fb_caption": "\ud83d\udc51 LADIES NIGHT RECAP \ud83d\udc51\n\nAnother incredible Ladies Night in the books! To everyone who came out \u2014 you made it special. \ud83d\udc99\n\nNext [DAY] is right around the corner. Share this with a friend and make her come with you. \ud83c\udfb1\ud83d\udccd [Address]",
+    "hashtags": "#LadiesNight #GirlsNight #BreakerBilliards #NJNightlife #LadiesWhoPlay #PoolQueens #WeeklySpecial",
+    "ig_format": "Carousel + Reel combo",
+    "ig_how": "Carousel: 8\u201310 photos from Ladies Night with permission. Tag every guest visible \u2014 they'll share to their own Stories which is free reach. ALSO post a 30s Reel of fast cuts from the night with a feminine-coded trending audio. Two posts in one day for this milestone-style recap.",
+    "ig_specs": "Carousel 4:5, 8\u201310 photos. Reel 9:16, 30s. Both posted within 4 hours.",
+    "tt_format": "30s recap edit",
+    "tt_how": "Same Ladies Night footage, edited fast for TT. Trending women's empowerment / 'girls night' audio. Caption: 'POV: you missed Ladies Night.' This is the FOMO post that drives next week's attendance.",
+    "tt_specs": "9:16, 21\u201330s. Native. Geo-tag.",
+    "fb_format": "Photo dump (8\u201310 photos)",
+    "fb_how": "FB photo dumps from real events get massive engagement because attendees share to their own profiles. Tag visible guests \u2014 they get a notification, they share. Caption with next week's date in BOLD CAPS for clarity.",
+    "fb_specs": "Carousel of 8\u201310 photos. Tag liberally. Include next week's date prominently."
+  },
+  {
+    "date": "16",
+    "day": "Fri",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "billiards",
+    "title": "8-Ball Tournament Announcement",
+    "concept": "Announce the in-house tournament. Drive competitive players AND casual fans. Sign-up CTA via DM or comment.",
+    "ig_caption": "For the ones who play to WIN. \ud83c\udfc6\ud83c\udfb1\n\nBreaker Billiards 8-Ball Tournament \u2014 coming soon. Whether you're a shark or a rising star, this is your stage.\n\nDrop 'I'M IN' in the comments if you want details. \ud83d\udc40",
+    "tt_caption": "8-Ball Tournament at Breaker Billiards is COMING \ud83c\udfc6\ud83c\udfb1 Are you built for it?? Drop I'M IN if you want details \u2014 this is going to be HYPE. #8Ball #PoolTournament #BreakerBilliards #CompetitivePool #BilliardsLife",
+    "fb_caption": "\ud83c\udfc6\ud83c\udfb1 TOURNAMENT ANNOUNCEMENT \ud83c\udfb1\ud83c\udfc6\n\nBreaker Billiards is hosting its first official 8-Ball Tournament! Details coming soon \u2014 comment 'I'M IN' and we'll DM you registration info.\n\nShare this! Let's get the best players in here. \ud83d\udd35",
+    "hashtags": "#8BallTournament #PoolTournament #BreakerBilliards #CompetitivePool #BilliardsNJ #TournamentLife #PoolShark",
+    "ig_format": "Carousel: graphic announcement + tournament details",
+    "ig_how": "Slide 1: bold Canva tournament graphic with date/format prominently displayed. Slides 2-4: details (rules, prize, registration). Slide 5: real photos of competitive games at Breaker. Brand colors throughout. Pin to grid until tournament happens.",
+    "ig_specs": "4:5 carousel, 5 slides. Slide 1 must work as a thumbnail.",
+    "tt_format": "30s hype announcement",
+    "tt_how": "Cinematic tournament-style edit. Slow-mo cue strikes. Tense music build. End with 'are you in?' on a black screen with the tournament date. Native upload.",
+    "tt_specs": "9:16, 21\u201330s. Use a 'face-off' or 'arena' style trending audio. Caption hook: 'Pool players of NJ \u2014 listen up.'",
+    "fb_format": "Same graphic + Facebook Event creation",
+    "fb_how": "Post the Canva graphic large. CRITICAL: also create a Facebook Event for the tournament. FB Events get auto-distributed to local users browsing 'things to do near me.' This is the single biggest organic reach hack on FB. Boost the post with $30\u201350 toward NJ adults 21\u201355 interested in pool/billiards.",
+    "fb_specs": "Square graphic. Boost. Create FB Event with all logistics."
+  },
+  {
+    "date": "17",
+    "day": "Sat",
+    "month": "MAY",
+    "platforms": [
+      "tt",
+      "ig"
+    ],
+    "type": "comedy",
+    "title": "Sketch: First Date at a Pool Hall",
+    "concept": "First date \u2014 nervous energy, accidentally winning too easily, trying to let the date win, it backfires. Wholesome-funny, highly shareable.",
+    "ig_caption": "First date at the pool hall is a full psychological operation. \ud83d\ude02\ud83c\udfb1\n\nThe strategy. The miscalculation. The totally-on-purpose miss that somehow still wins.\n\nBreaker Billiards: perfect for first dates, second dates, and all the ones after. \ud83d\udc99",
+    "tt_caption": "First date at a pool hall is a social experiment \ud83d\ude02\ud83c\udfb1 Do you win big and risk it all, or do you miss on purpose?? The eternal question \ud83d\udc80 #FirstDate #DateNight #PoolHall #BreakerBilliards #DatingHumor",
+    "fb_caption": "\ud83d\ude02 The first date pool hall strategy is too real. Do you go easy? Do you flex? Do you accidentally win 5-0 and ruin everything?\n\nWe support all decisions. Tag someone you'd bring to Breaker Billiards for a first date! \ud83c\udfb1\ud83d\udc99",
+    "hashtags": "#FirstDate #DateNight #PoolHall #BreakerBilliards #DatingHumor #CoupleGoals #DateIdeas",
+    "ig_format": "Reel \u2014 wholesome date-night sketch",
+    "ig_how": "Two actors at a table. Show the internal monologue via voiceover or text. The 'do I let them win' beat is the hook. Cute, wholesome, NOT crude. Use a soft acoustic trending audio. Tighter cuts, longer beats on facial reactions.",
+    "ig_specs": "9:16 Reel, 30\u201345s. Pin to grid for date-idea search discoverability.",
+    "tt_format": "45s native sketch",
+    "tt_how": "Native upload. Use trending dating-humor audio. The hook line in first 2s: 'POV: it's the third date and you're winning by 6 balls.' Cuteness wins on TT for date-coded content.",
+    "tt_specs": "9:16, 30\u201345s. Captions burned in. The internal monologue should appear as text overlay.",
+    "fb_format": "Cross-post Reel + tag-encouraging caption",
+    "fb_how": "Cross-post via Business Suite. The FB caption explicitly invites people to TAG someone they'd bring on a first date. Tag-prompt comedy is a top-3 engagement format on FB.",
+    "fb_specs": "Reel cross-post. Caption 80\u2013120 words ending in tag prompt."
+  },
+  {
+    "date": "18",
+    "day": "Sun",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "fb"
+    ],
+    "type": "bar",
+    "title": "Sunday Sip: The 8 Ball Mule",
+    "concept": "Feature the 8 Ball Mule \u2014 ginger beer fizz, dragonberry color, lime garnish. Perfect Sunday sipping content.",
+    "ig_caption": "Sundays taste like this. \ud83c\udfb1\ud83c\udf79\n\nThe 8 Ball Mule: Bacardi Dragonberry Rum \u00b7 Ginger Beer \u00b7 Lime Juice \u00b7 Strawberry Pur\u00e9e \u00b7 Lime Garnish\n\nNamed after the most feared ball on the table. Just as dangerous in the best way.\n\nSee you today. \ud83d\udd35",
+    "tt_caption": "The 8 Ball Mule is dangerous and I mean that as a compliment \ud83c\udfb1\ud83c\udf79 Bacardi Dragonberry + Ginger Beer + Strawberry Pur\u00e9e = Sunday sorted. Come get one! #8BallMule #CocktailTok #SundayDrinks #BreakerBilliards",
+    "fb_caption": "\ud83c\udfb1 SUNDAY SIPPING: THE 8 BALL MULE \ud83c\udf79\n\nBacardi Dragonberry Rum \u00b7 Ginger Beer \u00b7 Lime Juice \u00b7 Strawberry Pur\u00e9e \u00b7 Lime Garnish\n\nNamed after the most important ball in the game. Come in today and order yours! \ud83d\udccd",
+    "hashtags": "#8BallMule #SundayFunday #CocktailFeature #BreakerBilliards #NJBar #SundaySipping #DragonberryRum",
+    "ig_format": "Reel \u2014 ginger beer pour moneyshot",
+    "ig_how": "Mule mug close-up. Ice. Rum pour. Pur\u00e9e swirl (the strawberry creates a beautiful color). Ginger beer FIZZ over the top \u2014 that's the moneyshot. Lime garnish drop. The fizz needs to be sharp and crisp on camera. Use phone slow-mo for the pour, regular speed for the garnish.",
+    "ig_specs": "9:16 Reel, 15\u201320s. The fizz shot must be at least 2 seconds. That's what people screenshot.",
+    "tt_format": "SKIP \u2014 IG/FB carry",
+    "tt_how": "You've already done a cocktail TT this week. Save the energy for the comedy and milestone wrap-up. Cocktail variety on the feed wins, but TT cocktail content needs spacing.",
+    "tt_specs": "N/A.",
+    "fb_format": "Hero photo + recipe",
+    "fb_how": "Sharp single photo of the finished mule in the copper mug. Caption breaks down recipe with the '8 Ball' branding angle (most-feared-ball naming). FB users LOVE branded story behind drinks.",
+    "fb_specs": "4:5 photo. Caption 100\u2013200 words. Sunday content underrated on FB \u2014 less competition."
+  },
+  {
+    "date": "19",
+    "day": "Mon",
+    "month": "MAY",
+    "platforms": [
+      "ig",
+      "tt",
+      "fb"
+    ],
+    "type": "billiards",
+    "title": "Month 1 Recap \u2014 What's Coming Next",
+    "concept": "Closing post \u2014 recap the energy of the past 30 days, tease upcoming events. Community-forward message that drives follows and return visits.",
+    "ig_caption": "One month. Hundreds of games. Countless cocktails. And we're just getting started. \ud83c\udfb1\ud83d\udc99\n\nBreaker Billiards is more than a pool hall \u2014 it's a community. And YOU built it.\n\nStay tuned. The best is absolutely still to come.\n\nShoot Pool. Not People. \ud83d\udd35",
+    "tt_caption": "What a month it's been at Breaker Billiards \ud83c\udfb1\ud83d\udc99 From the 3-month anniversary to challenges, cocktails, and comedy \u2014 we're only just getting started. Follow for what's next! #BreakerBilliards #Recap #Community #WhatsNext",
+    "fb_caption": "\ud83d\udc99\ud83c\udfb1 WHAT A MONTH \ud83c\udfb1\ud83d\udc99\n\nFrom our 3-month anniversary to Ladies Night, College Night, cocktail features, and all the games in between \u2014 this community has been EVERYTHING.\n\nUpcoming: 8-Ball Tournament, new specials, new cocktails, and more surprises.\n\nMake sure you're following us so you never miss a thing! \ud83d\udccd [Address]",
+    "hashtags": "#BreakerBilliards #MonthRecap #Community #ShootPoolNotPeople #WhatsComing #NJNightlife #PoolHall #StayTuned",
+    "ig_format": "Carousel + Reel \u2014 best of 30 days",
+    "ig_how": "Carousel: top 8\u201310 BEST moments from the 30 days (use posts that performed best). Reel: 60s emotional best-of-the-month edit set to a heartfelt trending audio. Two posts. Pin both. The Reel is for reach, the carousel is for permanence.",
+    "ig_specs": "Carousel 4:5. Reel 9:16, 60s. Posted same day, 4 hours apart.",
+    "tt_format": "60s month recap",
+    "tt_how": "Same source footage as the IG Reel but edited TIGHTER for TT. Trending 'we did that' audio. End with 'follow for whats next.' This is your #1 follower-acquisition post of the month.",
+    "tt_specs": "9:16, 50\u201360s. Native. Pin to profile.",
+    "fb_format": "Photo dump + heartfelt caption + upcoming events",
+    "fb_how": "Carousel of 10 best photos from the month. The FB caption is LONG \u2014 recap everything that happened, list what's coming, thank the community. FB users want the full story. End with explicit ask: 'Follow our page and turn on notifications.'",
+    "fb_specs": "Carousel 4:5, 10 photos. Caption 300\u2013500 words. Final post is a major recap \u2014 give it the space."
+  }
+];
+
+const platformLabels = {ig:"IG",tt:"TT",fb:"FB"};
+const typeLabels = {billiards:"🎱 Billiards",bar:"🍹 Bar",comedy:"😂 Comedy",special:"⭐ Special",milestone:"🏆 Milestone"};
+
+const weeks = [
+  {label:"Week 1 — April 20–26",indices:[0,1,2,3,4,5,6]},
+  {label:"Week 2 — April 27 – May 3",indices:[7,8,9,10,11,12,13]},
+  {label:"Week 3 — May 4–10 (3-Month Anniversary!)",indices:[14,15,16,17,18,19,20]},
+  {label:"Week 4 — May 11–19",indices:[21,22,23,24,25,26,27,28,29]}
+];
+
+function buildPlatformBlock(platformKey, post) {
+  const labels = {ig: 'INSTAGRAM', tt: 'TIKTOK', fb: 'FACEBOOK'};
+  const blockClass = {ig: 'ig-block', tt: 'tt-block', fb: 'fb-block'};
+  const captionKeys = {ig: 'ig_caption', tt: 'tt_caption', fb: 'fb_caption'};
+  const formatKeys = {ig: 'ig_format', tt: 'tt_format', fb: 'fb_format'};
+  const howKeys = {ig: 'ig_how', tt: 'tt_how', fb: 'fb_how'};
+  const specKeys = {ig: 'ig_specs', tt: 'tt_specs', fb: 'fb_specs'};
+
+  const format = post[formatKeys[platformKey]] || '';
+  const how = post[howKeys[platformKey]] || '';
+  const spec = post[specKeys[platformKey]] || '';
+  const caption = post[captionKeys[platformKey]] || '';
+
+  const isSkip = format.toUpperCase().includes('SKIP');
+
+  if (isSkip) {
+    return `
+      <div class="plat-block ${blockClass[platformKey]}">
+        <div class="plat-block-header">
+          <span class="plat-block-name">${labels[platformKey]}</span>
+          <span class="plat-block-format">${format}</span>
+        </div>
+        <div class="skip-marker">
+          <div class="plat-block-text">${how}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="plat-block ${blockClass[platformKey]}">
+      <div class="plat-block-header">
+        <span class="plat-block-name">${labels[platformKey]}</span>
+        <span class="plat-block-format">${format}</span>
+      </div>
+      <div class="plat-block-row">
+        <div class="plat-block-label">📋 How to create</div>
+        <div class="plat-block-text">${how}</div>
+      </div>
+      <div class="plat-block-row">
+        <div class="plat-block-label">⚙️ Specs & format notes</div>
+        <div class="plat-block-text spec">${spec}</div>
+      </div>
+      <div class="plat-block-row">
+        <div class="plat-block-label">✍️ Caption (paste-ready)</div>
+        <div class="plat-block-text caption">${caption}</div>
+      </div>
+    </div>
+  `;
+}
+
+function buildPlan(){
+  const c = document.getElementById('plan-container');
+  weeks.forEach(w => {
+    const ws = document.createElement('div'); ws.className='week-section';
+    ws.innerHTML=`<div class="week-label">${w.label}</div>`;
+    const grid = document.createElement('div'); grid.className='cards-grid';
+    w.indices.forEach(i => {
+      const p = posts[i]; if(!p) return;
+      const card = document.createElement('div');
+      card.className='card'+(p.type==='milestone'?' milestone-card':'');
+      card.dataset.type=p.type;
+      card.dataset.platforms=p.platforms.join(',');
+
+      const ptags = p.platforms.map(pl=>`<span class="tag tag-${pl}">${platformLabels[pl]}</span>`).join('');
+
+      // Build a block for each platform listed in the post
+      const platformBlocks = ['ig','tt','fb']
+        .filter(pl => p.platforms.includes(pl) || (p[pl+'_format'] && p[pl+'_format'].toUpperCase().includes('SKIP')))
+        .map(pl => buildPlatformBlock(pl, p))
+        .join('');
+
+      card.innerHTML=`
+        <div class="card-top">
+          <div class="date-block">
+            <div class="day-name">${p.day}</div>
+            <div class="date-num">${p.date}</div>
+            <div class="month-abbr">${p.month}</div>
+          </div>
+          <div class="tags-block">${ptags}<span class="type-tag type-${p.type}">${typeLabels[p.type]||p.type}</span></div>
+        </div>
+        <div class="card-title">${p.title}</div>
+        <div class="card-concept">${p.concept}</div>
+        <button class="toggle-btn" onclick="toggleCard(this)">▼ View Platform-Specific Instructions</button>
+        <div class="expand-section">
+          ${platformBlocks}
+          <div class="hashtags-section">
+            <div class="plat-block-label">🏷️ Hashtag bank (mix into platform captions)</div>
+            <div class="hashtags">${p.hashtags}</div>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+    ws.appendChild(grid); c.appendChild(ws);
+  });
+}
+
+function toggleCard(btn){
+  const card=btn.closest('.card');
+  const exp=card.classList.toggle('expanded');
+  btn.textContent=(exp?'▲ Hide Platform Instructions':'▼ View Platform-Specific Instructions');
+}
+
+function filterCards(type,btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(card=>{
+    if(type==='all'){card.classList.remove('hidden');}
+    else if(['ig','tt','fb'].includes(type)){card.classList.toggle('hidden',!card.dataset.platforms.includes(type));}
+    else{card.classList.toggle('hidden',card.dataset.type!==type);}
+  });
+}
+
+buildPlan();
+</script>
+</body>
+</html>
